@@ -41,8 +41,14 @@ III. Sử dụng phần mềm
 - ```sh
   python main.py
   ```
-  
-- Đảm bảo bạn có hình ảnh cần kiểm tra trong thư mục 'images
+
+2. **Ví dụ**
+
+- Đảm bảo bạn có hình ảnh cần kiểm tra trong thư mục 'images'
+
+- ```sh
+  python detect_helmet.py --input images/
+  ```
 
 
   
