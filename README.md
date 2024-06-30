@@ -16,26 +16,33 @@ III. Sử dụng phần mềm
 
 1. **Clone repository**
 
-- '''sh
+- ```sh
   git clone https://github.com/Landaoduy/Helmet-Safety-Protection.git
   cd Helmet-Safety-Protection
-  '''
+  ```
 
 2. **Tạo môi trường conda**
 
-- '''sh
+- ```sh
   conda create -n helmet_safety_env python=3.9
   conda activate helmet_safety_env
-  '''
+  ```
 
 3. **Cài đặt các thư viện cần thiết**
 
-- '''sh
+- ```sh
   !pip install -r requirements.txt
   !pip install -e .
-  '''
-### **III. Sử dụng phần mềm***
+  ```
+### **III. Sử dụng phần mềm**
 
+1. **Chạy dự án**
+
+- ```sh
+  python main.py
+  ```
+  
+- Đảm bảo bạn có hình ảnh cần kiểm tra trong thư mục 'images
 
 
   
