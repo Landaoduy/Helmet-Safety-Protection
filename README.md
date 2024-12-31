@@ -67,7 +67,7 @@ model.train(
   ```sh
   model.val(data='path/to/data.yaml', imgsz=320, split='test')
   ```
-* **Images**:
+* **Result**:
   ![helmet_output](https://github.com/user-attachments/assets/08ff777d-6859-4046-8c71-86eb5127d8b9)
 
 ### Inference
