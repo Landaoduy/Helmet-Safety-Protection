@@ -4,7 +4,7 @@
 
 * This project implements an automated helmet detection system using YOLOv10 to enhance workplace safety in construction areas. The system can identify multiple objects including persons, heads, and safety helmets in images, making it useful for monitoring personal protective equipment (PPE) compliance.
 
-## Features
+### Features
 
 * Real-time detection of safety helmets
 * Multiple object detection capabilities:
@@ -38,21 +38,36 @@
   pip install -r requirements.txt
   pip install -e .
   ```
+* **Dataset**:
+  * The project uses a custom Safety Helmet Dataset containing annotated images of construction workers with and without helmets.
+    
+  * The dataset is organized with the following structure:
+    * train
+    * test
+    * data.yaml
+      
+### Training Process
+```sh
+# Initialize model
+model = YOLOv10('yolov10n.pt')
 
+# Training configuration
+model.train(
+    data='path/to/data.yaml',
+    epochs=50,
+    batch=64,
+    imgsz=320,
+    amp=True
+)
+```
+
+### Model Evaluation
+
+* The model performs validation on a separate test set to ensure reliable performance metrics. Evaluation can be run using:
+  ```sh
+  model.val(data='path/to/data.yaml', imgsz=320, split='test')
+  ```
   
-  
-
-#### Data Visualization
-
-Show a few visualization of the data and say a few words about what you see.
-
-### Problem Formulation
-
-* Define:
-  * Input / Output
-  * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
 
 ### Training
 
