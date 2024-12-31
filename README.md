@@ -1,7 +1,5 @@
 # Helmet-Safety-Protection
 
-# Project title
-
 ## Overview
 
 * This project implements an automated helmet detection system using YOLOv10 to enhance workplace safety in construction areas. The system can identify multiple objects including persons, heads, and safety helmets in images, making it useful for monitoring personal protective equipment (PPE) compliance.
@@ -17,18 +15,32 @@
 * Configurable confidence threshold for detections
 * Support for various image sizes and batch processing
 
-### Data
+### Technical Details
 
-* Data:
-  * Type: For example
-    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
-    * Input: CSV file of features, output: signal/background flag in 1st column.
-  * Size: How much data?
-  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
+* **Model Architecture**:
+  * Base Model: YOLOv10
+  * Input Image Size: 320x320 pixels
+  * Framework: PyTorch with Ultralytics implementation
 
-#### Preprocessing / Clean up
+* **Training Configuration**:
+  * Epochs: 50
+  * Batch size: 64
+  * Image size: 320x320
+  * Dataset: Safety Helmet Dataset
+    
+* **Installation**:
+  ```sh
+  # Clone YOLOv10 repository
+  git clone https://github.com/THU-MIG/yolov10.git
 
-* Describe any manipulations you performed to the data.
+  # Install requirements
+  cd yolov10
+  pip install -r requirements.txt
+  pip install -e .
+  ```
+
+  
+  
 
 #### Data Visualization
 
